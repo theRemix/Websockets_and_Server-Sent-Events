@@ -25,6 +25,11 @@ Discuss some libraries/tools.
     - http _is_ bidirectional network data communication over a network socket, just with rules
     - [node http example](./node-http.js)
         - familiar?
+        - curl and browser test
+            - curl: (8) Weird server reply
+        - make it speak http
+            - curl and browser test
+            - add custom headers
     - Quick: what is `nc`? (demo)
         - Demonstrate two way communication _without http_
         - `man nc`
@@ -32,3 +37,6 @@ Discuss some libraries/tools.
         - _disclaimer_, don't run `nc` commands that you don't understand, it's very powerful, and can powerfully mess up your day
     - [nc http example](./nc-http.sh)
         - raw, still http
+            - client must close after write!
+        - [node bidi example](./node-bidi.js)
+
