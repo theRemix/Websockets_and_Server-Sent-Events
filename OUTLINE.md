@@ -13,6 +13,9 @@ Dive into some of my personal WSS patterns.
 
 Discuss some libraries/tools.
 
+# Slides
+
+https://slides.com/theremix/wsssse
 
 # Presentation Outline
 
@@ -61,6 +64,8 @@ Discuss some libraries/tools.
     - raw, still http
         - client must close after write!
     - [node bidi example](./node-bidi.js)
+
+What would we do if we want to update the ui with current info from the server using HTTP?
 
 ## Explain bidirectional communication over network sockets
 
