@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { render } from 'react-dom'
 
-const POLL_INTERVAL = 5000
+const POLL_INTERVAL = 2000
 
 const ActivityLog = ({ placeholder }) => <li>{placeholder}</li>
 
@@ -11,13 +11,14 @@ const App = () => {
 
   useEffect(() => {
     setInterval(() =>
-      // fetch()
-      setLogs([...logs, Date.now()])
+      fetch('/api/game-events')
+        .then(res => res.json())
+        .then(setLogs)
     ,POLL_INTERVAL)
-  })
+  }, [])
 
   return <ul>
-    { logs.map(log => <ActivityLog key={log} placeholder={log} />) }
+    { logs.map(log => <ActivityLog key={log.id} placeholder={log.id} />) }
   </ul>
 }
 
