@@ -80,13 +80,24 @@ What would we do if we want to update the ui with current info from the server u
     - wss i'm typing
     - POST send message
 
+### Benefits
+
+- bidirectional near real-time communication
+
 ### Caveats
 
 Extra work when using more than a single process.
 
+
+
 ## Live code SSE
 
 - debug sse
+
+### Benefits
+
+- simpler setup
+- can be simpler horizontal scaling
 
 ### Caveats
 
