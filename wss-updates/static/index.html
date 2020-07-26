@@ -39,8 +39,19 @@
         display: block;
       }
 
-      .sourcePlayer {
+      .eventType-KILL .sourcePlayer {
         background-color: #f25841;
+      }
+      .eventType-DEATH .sourcePlayer {
+        background-color: #3bcba8;
+      }
+      .eventType-KILL .sourcePlayer:after {
+        border-left: solid 20px #f25841;
+      }
+      .eventType-DEATH .sourcePlayer:after {
+        border-left: solid 20px #3bcba8;
+      }
+      .sourcePlayer {
         padding: 10px;
         display: flex;
         flex-flow: row nowrap;
@@ -59,7 +70,6 @@
         border-top: solid 51px transparent;
         border-bottom: solid 51px transparent;
         border-right: solid 20px transparent;
-        border-left: solid 20px #f25841;
       }
       .sourcePlayer img, .sourcePlayer span,  {
         margin: 0;
@@ -72,8 +82,13 @@
         padding: 0 15px;
       }
 
-      .targetPlayer {
+      .eventType-KILL .targetPlayer {
         background-color: #3bcba8;
+      }
+      .eventType-DEATH .targetPlayer {
+        background-color: #f25841;
+      }
+      .targetPlayer {
         padding: 10px;
         padding-left: 20px;
         display: flex;

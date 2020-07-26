@@ -5,8 +5,8 @@ const wssProtocol = (window.location.protocol === 'https:' ? 'wss:' : 'ws:')
 const wssUrl = `${wssProtocol}//${window.location.hostname}:${window.location.port}`
 const socket = new WebSocket(wssUrl);
 
-const ActivityLog = ({ sourcePlayer, targetPlayer, weapon }) =>
-  <li className='eventLog eventAnimate'>
+const ActivityLog = ({ sourcePlayer, targetPlayer, type, weapon }) =>
+  <li className={`eventLog eventType-${type}`}>
     <div className='sourcePlayer'>
       <img className='avatar' src={`./images/${sourcePlayer.avatar}`} />
       <span className='name'>{sourcePlayer.name}</span>
@@ -46,6 +46,7 @@ const App = () => {
         key={log.id}
         sourcePlayer={log.sourcePlayer}
         targetPlayer={log.targetPlayer}
+        type={log.type}
         weapon={log.weapon}
       />
     )}

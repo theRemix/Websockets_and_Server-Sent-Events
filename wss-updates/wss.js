@@ -37,10 +37,11 @@ const gameEvents = (function* (){
     const sourcePlayerIdx = Math.floor(Math.random() * agents.length)
     let targetPlayerIdx = Math.floor(Math.random() * agents.length)
     while(sourcePlayerIdx === targetPlayerIdx) targetPlayerIdx = Math.floor(Math.random() * agents.length)
+    const type = Math.random() < .5 ? "KILL" : "DEATH"
 
     yield {
       id: Date.now(),
-      type: "KILL",
+      type,
       sourcePlayer: agents[sourcePlayerIdx],
       targetPlayer: agents[targetPlayerIdx],
       weapon: weapons[weaponIdx],
