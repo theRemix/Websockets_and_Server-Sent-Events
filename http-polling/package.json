@@ -1,12 +1,13 @@
 {
   "name": "http-polling",
   "version": "1.0.0",
-  "description": "",
+  "description": "HTTP Polling Example",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node .",
     "build": "parcel build static/index.html",
-    "dev": "nodemon -w api.js dev-server.js",
+    "postbuild": "ncp ./static/images ./dist/images",
+    "dev": "nodemon -w index.js -w api.js -w dev-server.js -w gameData.json dev-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -20,6 +21,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "ncp": "^2.0.0",
     "nodemon": "^2.0.4",
     "parcel-bundler": "^1.12.4"
   }

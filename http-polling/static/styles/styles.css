@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: url('../images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+@keyframes FadeIn {
+  0% { opacity: 0; margin-top: 50px; }
+  100% { opacity: 1; margin-top: 0px; }
+}
+
+.eventLogs {
+  list-style-type: none;
+  align-items: center;
+  margin-top: 40px;
+}
+.eventLog {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  animation: FadeIn 0.15s ease-out;
+}
+.eventLog img {
+  display: block;
+}
+
+.eventType-KILL .sourcePlayer {
+  background-color: #f25841;
+}
+.eventType-DEATH .sourcePlayer {
+  background-color: #3bcba8;
+}
+.eventType-KILL .sourcePlayer:after {
+  border-left: solid 20px #f25841;
+}
+.eventType-DEATH .sourcePlayer:after {
+  border-left: solid 20px #3bcba8;
+}
+.sourcePlayer {
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 0 auto;
+  align-items: center;
+  position: relative;
+}
+.sourcePlayer:after {
+  display: block;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 0;
+  right: -40px;
+  border-top: solid 51px transparent;
+  border-bottom: solid 51px transparent;
+  border-right: solid 20px transparent;
+}
+.sourcePlayer img, .sourcePlayer span,  {
+  margin: 0;
+  flex: 0 0 auto;
+}
+.sourcePlayer .avatar {
+  height: 82px;
+}
+.sourcePlayer .name {
+  padding: 0 15px;
+}
+
+.eventType-KILL .targetPlayer {
+  background-color: #3bcba8;
+}
+.eventType-DEATH .targetPlayer {
+  background-color: #f25841;
+}
+.targetPlayer {
+  padding: 10px;
+  padding-left: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 0 auto;
+  align-items: center;
+}
+.targetPlayer img, .targetPlayer span,  {
+  margin: 0;
+  flex: 0 0 auto;
+}
+.targetPlayer .avatar {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  height: 82px;
+}
+.targetPlayer .name {
+  padding: 0 15px;
+}
+
+.weapon {
+  flex: 0 0 auto;
+  height: 44px;
+}

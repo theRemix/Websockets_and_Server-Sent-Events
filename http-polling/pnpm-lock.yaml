@@ -6,6 +6,7 @@ devDependencies:
   babel-core: 6.26.3
   babel-preset-env: 1.7.0
   babel-preset-react: 6.24.1
+  ncp: 2.0.0
   nodemon: 2.0.4
   parcel-bundler: 1.12.4
 lockfileVersion: 5.1
@@ -4485,6 +4486,11 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-fpoe2T0RbHwBTBUOftAfBPaDEi06ufaUai0mE6Yn1kacc3SnTErfb/h+X94VXzI64rKFHYImXSvdwGGCmwOqCA==
+  /ncp/2.0.0:
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha1-GVoh1sRuNh0vsSgbo4uR6d9727M=
   /negotiator/0.6.2:
     dev: false
     engines:
@@ -6818,6 +6824,7 @@ specifiers:
   babel-preset-env: ^1.7.0
   babel-preset-react: ^6.24.1
   express: ^4.17.1
+  ncp: ^2.0.0
   nodemon: ^2.0.4
   parcel-bundler: ^1.12.4
   react: ^16.13.1
