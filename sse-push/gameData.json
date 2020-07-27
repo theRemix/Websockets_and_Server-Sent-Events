@@ -1,0 +1,73 @@
+{
+  "agents": [
+    {
+      "name": "Breach",
+      "avatar": "breach.png"
+    },
+    {
+      "name": "Brimstone",
+      "avatar": "brimstone.png"
+    },
+    {
+      "name": "Sova",
+      "avatar": "sova.png"
+    },
+    {
+      "name": "Sage",
+      "avatar": "sage.png"
+    },
+    {
+      "name": "Viper",
+      "avatar": "viper.png"
+    },
+    {
+      "name": "Phoenix",
+      "avatar": "phoenix.png"
+    },
+    {
+      "name": "Omen",
+      "avatar": "omen.png"
+    },
+    {
+      "name": "Raze",
+      "avatar": "raze.png"
+    },
+    {
+      "name": "Jett",
+      "avatar": "jett.png"
+    },
+    {
+      "name": "Cypher",
+      "avatar": "cypher.png"
+    }
+  ],
+  "weapons": [
+    {
+      "graphic": "gun0.png"
+    },
+    {
+      "graphic": "gun1.png"
+    },
+    {
+      "graphic": "gun2.png"
+    },
+    {
+      "graphic": "gun2.png"
+    },
+    {
+      "graphic": "gun3.png"
+    },
+    {
+      "graphic": "gun4.png"
+    },
+    {
+      "graphic": "gun5.png"
+    },
+    {
+      "graphic": "gun6.png"
+    },
+    {
+      "graphic": "gun7.png"
+    }
+  ]
+}
