@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { render } from 'react-dom'
 
 const wssProtocol = (window.location.protocol === 'https:' ? 'wss:' : 'ws:')
 const wssUrl = `${wssProtocol}//${window.location.hostname}:${window.location.port}`
-const socket = new WebSocket(wssUrl);
 
 const ActivityLog = ({ sourcePlayer, targetPlayer, type, weapon }) =>
   <li className={`eventLog eventType-${type}`}>
@@ -22,10 +21,21 @@ const ActivityLog = ({ sourcePlayer, targetPlayer, type, weapon }) =>
 const App = () => {
 
   const [logs, setLogs] = useState([])
+  const socket = useRef(null)
 
   useEffect(() => {
 
-    socket.onmessage = e => {
+    socket.current = new WebSocket(wssUrl);
+
+    // clean up
+    return () => socket.current.close()
+  }, [])
+
+
+  useEffect(() => {
+    if (!socket.current) return
+
+    socket.current.onmessage = e => {
       const gameEvent = JSON.parse(e.data)
 
       if(logs.length > 3){ // purge older events
@@ -35,10 +45,7 @@ const App = () => {
         setLogs([...logs, gameEvent])
       }
     }
-
-  }, [logs])
-
-
+  }, [logs]);
 
   return <ul className='eventLogs'>
     { logs.map(log =>
