@@ -24,3 +24,9 @@ See [wss-updates/](./wss-updates/)
 ## SSE Example
 
 See [sse-push/](./sse-push/)
+
+## Tags
+
+[`push`](https://github.com/theRemix/Websockets_and_Server-Sent-Events/tree/push) tag has WSS and SSE examples for pushing one way updates
+
+`master` branch and [`bidi`](https://github.com/theRemix/Websockets_and_Server-Sent-Events/tree/bidi) tag has WSS and SSE examples for bidirectional communication
