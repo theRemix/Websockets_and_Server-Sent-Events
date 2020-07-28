@@ -63,7 +63,12 @@ https://slides.com/theremix/wsssse
 - [nc http example](./nc-http.sh)
     - raw, still http
         - client must close after write!
-    - [node bidi example](./node-bidi.js)
+- [node bidi example](./node-bidi.js)
+    - test with nc
+    - ngrok
+- [node broadcast example](./node-broadcast.js)
+    - test with nc
+    - ngrok
 
 What would we do if we want to update the ui with current info from the server using HTTP?
 

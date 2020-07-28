@@ -12,6 +12,7 @@ Source for Websockets and SSE presentation
 - [node-http.js](./node-http.js)
 - [nc-http.js](./nc-http.js)
 - [node-bidi.js](./node-bidi.js)
+- [node-broadcast.js](./node-broadcast.js)
 
 ## HTTP Polling
 
