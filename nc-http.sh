@@ -1,6 +1,8 @@
 # server
+# -l listen
+# -N shutdown after EOF
 
-nc -l 8080
+nc -lN 8080
 
 
 # client
