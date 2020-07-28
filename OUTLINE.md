@@ -47,14 +47,6 @@ https://slides.com/theremix/wsssse
 
 ## Explain basic HTTP for contrast
 
-- [node socket example](./node-socket.js)
-- http _is_ bidirectional network data communication over a network socket, just with rules
-    - [node http example](./node-http.js)
-    - curl and browser test
-        - curl: (8) Weird server reply
-    - make it speak http
-        - curl and browser test
-        - add custom headers
 - Quick: what is `nc`? (demo)
     - Demonstrate two way communication _without http_
     - `man nc`
@@ -63,6 +55,14 @@ https://slides.com/theremix/wsssse
 - [nc http example](./nc-http.sh)
     - raw, still http
         - client must close after write!
+- [node socket example](./node-socket.js)
+- http _is_ bidirectional network data communication over a network socket, just with rules
+    - [node http example](./node-http.js)
+    - curl and browser test
+        - curl: (8) Weird server reply
+    - make it speak http
+        - curl and browser test
+        - add custom headers
 - [node bidi example](./node-bidi.js)
     - test with nc
     - ngrok
@@ -72,10 +72,10 @@ https://slides.com/theremix/wsssse
 
 What would we do if we want to update the ui with current info from the server using HTTP?
 
-## Explain bidirectional communication over network sockets
+## HTTP Polling
 
-- read and write from sockets
-- node-bidi.js
+- [http-polling/](./http-polling/)
+
 
 ## Live code WSS
 
@@ -115,6 +115,8 @@ https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server
     - server/ws/index.js
     - server/ws/client.js
     - https://github.com/GomaGames/dragons-vs-unicorns/blob/master/src/app/game/game.component.ts
+- inspect messages
+    - http://dragons.gomagames.com
 
 ## Abstractions and Alternatives
 

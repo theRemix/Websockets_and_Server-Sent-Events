@@ -12,7 +12,7 @@ const clientConnected = client => {
     console.log('---------------')
     client.write('IDK HOW TO HTTP!\r\n')
     client.end()
-  });
+  })
 }
 
 const server = createServer(clientConnected)
