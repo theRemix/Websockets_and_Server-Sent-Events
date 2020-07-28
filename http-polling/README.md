@@ -1,4 +1,4 @@
-# Server-Sent Events example
+# HTTP Polling example
 
 ## Dependencies
 

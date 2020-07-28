@@ -1,4 +1,4 @@
-# Server-Sent Events example
+# Websockets example
 
 ## Dependencies
 

@@ -47,9 +47,9 @@ https://slides.com/theremix/wsssse
 
 ## Explain basic HTTP for contrast
 
+- [node socket example](./node-socket.js)
 - http _is_ bidirectional network data communication over a network socket, just with rules
-- [node http example](./node-http.js)
-    - familiar?
+    - [node http example](./node-http.js)
     - curl and browser test
         - curl: (8) Weird server reply
     - make it speak http

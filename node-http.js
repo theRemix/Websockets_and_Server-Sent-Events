@@ -10,7 +10,10 @@ const clientConnected = client => {
   client.on('data', data => {
     console.log('Client Said:', data.toString())
     console.log('---------------')
-    client.write('IDK HOW TO HTTP!\r\n')
+    client.write('HTTP/1.1 200 OK\r\n')
+    client.write('X-MY-CUSTOM-HEADER: meow\r\n')
+    client.write('\r\n')
+    client.write('Now i\'m speaking HTTP!')
     client.end()
   });
 }

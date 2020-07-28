@@ -6,6 +6,7 @@ devDependencies:
   babel-core: 6.26.3
   babel-preset-env: 1.7.0
   babel-preset-react: 6.24.1
+  cssnano: 4.1.10
   ncp: 2.0.0
   nodemon: 2.0.4
   parcel-bundler: 1.12.4
@@ -6823,6 +6824,7 @@ specifiers:
   babel-core: ^6.26.3
   babel-preset-env: ^1.7.0
   babel-preset-react: ^6.24.1
+  cssnano: ^4.1.10
   express: ^4.17.1
   ncp: ^2.0.0
   nodemon: ^2.0.4
