@@ -26,7 +26,7 @@ api.get('/game-events', (req, res) => {
   })
 
   // optionally send first update
-  // res.write(JSON.stringify({ connected: true })+'\n\n')
+  // res.write("data:" + JSON.stringify({ connected: true })+'\n\n')
 })
 
 const eventDataStore = []
