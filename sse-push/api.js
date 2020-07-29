@@ -29,7 +29,23 @@ api.get('/game-events', (req, res) => {
   // res.write("data:" + JSON.stringify({ connected: true })+'\n\n')
 })
 
-const eventDataStore = []
+api.post('/like', (req, res) => {
+  if(!['id','x','y'].every(param => req.body.hasOwnProperty(param)))
+    return res.json({error: 'Required params: id, x, y'})
+
+  const { id, x, y } = req.body
+
+  // broadcast "<3" to all connected clients
+  clients.forEach(client => client.write(
+    'data: ' +
+    JSON.stringify({
+      op: 'LIKE',
+      payload: { id, x, y }
+    }) + '\n\n' // <-------------- separate entries with empty line
+  ))
+
+  res.json({ success: true })
+})
 
 // generate random game events
 const gameEvents = (function* (){
@@ -47,7 +63,7 @@ const gameEvents = (function* (){
       type,
       sourcePlayer: agents[sourcePlayerIdx],
       targetPlayer: agents[targetPlayerIdx],
-      weapon: weapons[weaponIdx],
+      weapon: weapons[weaponIdx]
     }
   }
 })()
@@ -59,9 +75,10 @@ const queueGameEvent = () => {
     clients.forEach(client =>
       client.write( // <------------- res.write()
         'data: ' +
-        JSON.stringify(
-          gameEvents.next().value
-        ) + '\n\n' // <-------------- separate entries with empty line
+        JSON.stringify({
+          op: 'GAME_EVENT',
+          payload: gameEvents.next().value
+        }) + '\n\n' // <-------------- separate entries with empty line
       )
     )
 
