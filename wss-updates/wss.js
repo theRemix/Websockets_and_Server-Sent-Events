@@ -12,7 +12,7 @@ const handleLike = (client, message) => {
     JSON.stringify({
       op: 'LIKE',
       payload: { id, x, y }
-    }) + '\n\n' // <-------------- separate entries with empty line
+    })
   ))
 }
 

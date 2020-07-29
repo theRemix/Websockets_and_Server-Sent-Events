@@ -69,7 +69,6 @@ const App = () => {
         y: e.pageY
       })
     })
-    .then(res => res.json())
   }
 
   return <ul className='eventLogs'>
