@@ -3,6 +3,19 @@ const { agents, weapons } = require('./gameData')
 // store connected clients in an array
 const clients = []
 
+const handleLike = (client, message) => {
+
+  const { id, x, y } = message
+
+  // broadcast "<3" to all connected clients
+  clients.forEach(client => client.send(
+    JSON.stringify({
+      op: 'LIKE',
+      payload: { id, x, y }
+    }) + '\n\n' // <-------------- separate entries with empty line
+  ))
+}
+
 const wssHandler = client => {
 
   // add client to list of clients
@@ -11,6 +24,13 @@ const wssHandler = client => {
   // handle incoming messages from client
   client.on('message', message => {
     console.log('received: %s', message)
+    const { op, payload } = JSON.parse(message)
+    switch(op){
+      case 'LIKE':
+        handleLike(client, payload)
+        break;
+      default: console.warn(`RECEIVED UNSUPPORTED OP: ${op}`)
+    }
   })
 
   // Mandatory! remove client from client list
@@ -55,9 +75,10 @@ const queueGameEvent = () => {
     // broadcast new game event
     clients.forEach(client =>
       client.send(
-        JSON.stringify(
-          gameEvents.next().value
-        )
+        JSON.stringify({
+          op: 'GAME_EVENT',
+          payload: gameEvents.next().value
+        })
       )
     )
 

@@ -6,6 +6,7 @@ devDependencies:
   babel-core: 6.26.3
   babel-preset-env: 1.7.0
   babel-preset-react: 6.24.1
+  body-parser: 1.19.0
   cssnano: 4.1.10
   ncp: 2.0.0
   nodemon: 2.0.4
@@ -1868,7 +1869,6 @@ packages:
       qs: 6.7.0
       raw-body: 2.4.0
       type-is: 1.6.18
-    dev: false
     engines:
       node: '>= 0.8'
     resolution:
@@ -2044,7 +2044,6 @@ packages:
     resolution:
       integrity: sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
   /bytes/3.1.0:
-    dev: false
     engines:
       node: '>= 0.8'
     resolution:
@@ -2384,7 +2383,6 @@ packages:
     resolution:
       integrity: sha512-ExO0774ikEObIAEV9kDo50o+79VCUdEB6n6lzKgGwupcVeRlhrj3qGAfwq8G6uBJjkqLrhT0qEYFcWng8z1z0g==
   /content-type/1.0.4:
-    dev: false
     engines:
       node: '>= 0.6'
     resolution:
@@ -3637,7 +3635,6 @@ packages:
       setprototypeof: 1.1.1
       statuses: 1.5.0
       toidentifier: 1.0.0
-    dev: false
     engines:
       node: '>= 0.6'
     resolution:
@@ -4343,7 +4340,6 @@ packages:
     resolution:
       integrity: sha512-rQvjv71olwNHgiTbfPZFkJtjNMciWgswYeciZhtvWLO8bmX3TnhyA62I6sTWOyZssWHJJjY6/KiWwqQsWWsqOA==
   /media-typer/0.3.0:
-    dev: false
     engines:
       node: '>= 0.6'
     resolution:
@@ -5455,7 +5451,6 @@ packages:
     resolution:
       integrity: sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
   /qs/6.7.0:
-    dev: false
     engines:
       node: '>=0.6'
     resolution:
@@ -5505,7 +5500,6 @@ packages:
       http-errors: 1.7.2
       iconv-lite: 0.4.24
       unpipe: 1.0.0
-    dev: false
     engines:
       node: '>= 0.8'
     resolution:
@@ -6476,7 +6470,6 @@ packages:
     dependencies:
       media-typer: 0.3.0
       mime-types: 2.1.27
-    dev: false
     engines:
       node: '>= 0.6'
     resolution:
@@ -6576,7 +6569,6 @@ packages:
     resolution:
       integrity: sha512-uNaeirEPvpZWSgzwsPGtU2zVSTrn/8L5q/IexZmH0eH6SA73CmAA5U4GwORTxQAZs95TAXLNqeLoPPNO5gZfWg==
   /unpipe/1.0.0:
-    dev: false
     engines:
       node: '>= 0.8'
     resolution:
@@ -6832,6 +6824,7 @@ specifiers:
   babel-core: ^6.26.3
   babel-preset-env: ^1.7.0
   babel-preset-react: ^6.24.1
+  body-parser: ^1.19.0
   cssnano: ^4.1.10
   express: ^4.17.1
   ncp: ^2.0.0
